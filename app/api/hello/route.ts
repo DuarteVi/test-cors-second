@@ -11,3 +11,14 @@ export async function GET (request: NextRequest){
     return NextResponse.json(alice);
 }
 
+export async function DELETE (request: NextRequest){
+    
+    const bob = {
+        'pseudo': "Bob",
+        'password': "MiamLesPoires",
+        'phone': "0611332022"
+    }
+
+    return NextResponse.json(bob);
+}
+
