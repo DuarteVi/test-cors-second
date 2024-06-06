@@ -1,16 +1,13 @@
+import { NextApiResponse } from "next";
 import { RequestCookie } from "next/dist/compiled/@edge-runtime/cookies";
 import { cookies } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 
 const cookieName = 'MonSuperCookie';
 
-export async function POST (request: NextRequest){
-    cookies().set({
-        name: cookieName,
-        value: 'miam',
-        path: '/',
-      });
-    return NextResponse.json("cookie set");
+export async function POST (request: NextRequest, response : NextApiResponse){
+    response.setHeader('Set-Cookie', 'MonSuperCookie=miamMiam; HttpOnly; Secure; SameSite=None; Path=/');
+    response.status(200).json({ message: 'Cookie set' });
 }
 
 export async function GET (request: NextRequest){

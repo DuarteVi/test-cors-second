@@ -35,6 +35,9 @@ export default function Home() {
   }
 
   const routeCookie = 'https://test-cors-second.vercel.app/api/cookie';
+  const headerGetCookie = {
+    withCredentials: true
+  }
 
 
   const [pseudoGetAlice, setFirstName] = useState<string>('');
@@ -83,7 +86,7 @@ export default function Home() {
   };
 
   const setMyCookie = async () => {
-    await axios.post(routeCookie);
+    await axios.post(routeCookie,headerGetCookie);
   };
 
   const deleteMyCookie = async () => {
