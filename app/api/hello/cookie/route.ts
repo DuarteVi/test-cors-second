@@ -6,8 +6,7 @@ import { NextRequest, NextResponse } from "next/server";
 const cookieName = 'MonSuperCookie';
 
 export async function POST (request: NextRequest, response : NextApiResponse){
-  response.setHeader('Access-Control-Allow-Origin', 'https://test-cors-second.vercel.app');
-  response.setHeader('Access-Control-Allow-Credentials', 'true');
+
   response.setHeader('Set-Cookie', 'MonSuperCookie=miamMiam; HttpOnly; Secure; SameSite=None; Path=/');
   response.status(200).json({ message: 'Cookie set' });
 }
