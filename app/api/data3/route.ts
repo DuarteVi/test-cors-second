@@ -24,13 +24,3 @@ export async function PUT (request: NextRequest){
     
     return NextResponse.json('This is the response of your PUT request');
 }
-
-export async function PATCH (request: NextRequest){
-    
-    return NextResponse.json('This is the response of your PATCH request');
-}
-
-export async function OPTIONS (request: NextRequest){
-    
-    return NextResponse.json('This is the response of your OPTIONS request');
-}
