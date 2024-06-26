@@ -13,7 +13,9 @@ const nextConfig = {
             {
                 source: "/api/data2",
                 headers: [
-                    { key: "Access-Control-Allow-Origin", value: "other-website.com" },
+                    { key: "Access-Control-Allow-Origin", value: "https://test-cors-drab.vercel.app" },
+                    // { key: "Access-Control-Allow-Origin", value: "http://my-site.com:3000" },
+                    { key: "Access-Control-Allow-Methods", value: "DELETE" },
                 ]
             },
             {
@@ -21,6 +23,12 @@ const nextConfig = {
                 headers: [
                     { key: "Access-Control-Allow-Origin", value: "*" },
                     { key: "Access-Control-Allow-Methods", value: "PUT" },
+                ]
+            },
+            {
+                source: "/api/data4",
+                headers: [
+                    { key: "Access-Control-Allow-Origin", value: "other-website.com" },
                 ]
             }
         ]
