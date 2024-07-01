@@ -51,7 +51,7 @@ const nextConfig = {
             {
                 source: "/api/data7",
                 headers: [
-                    { key: "Access-Control-Allow-Origin", value: "https://vercel.app" },
+                    { key: "Access-Control-Allow-Origin", value: "https://*.vercel.app" },
                     // { key: "Access-Control-Allow-Origin", value: "http://com:300" },
                     { key: "Access-Control-Allow-Methods", value: "DELETE" },
                 ]
